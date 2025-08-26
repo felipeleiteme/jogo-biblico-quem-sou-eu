@@ -26,6 +26,42 @@ const BibleGame = () => {
   const [userGuess, setUserGuess] = useState('');
   const [usedCharacters, setUsedCharacters] = useState<number[]>([]);
 
+  // Carregar o estado do jogo do localStorage ao iniciar
+  useEffect(() => {
+    const savedState = localStorage.getItem('bibleGameState');
+    if (savedState) {
+      setGameState(JSON.parse(savedState));
+    }
+    const savedUsedCharacters = localStorage.getItem('usedCharacters');
+    if (savedUsedCharacters) {
+      setUsedCharacters(JSON.parse(savedUsedCharacters));
+    }
+  }, []);
+
+  // Salvar o estado do jogo no localStorage sempre que ele mudar
+  useEffect(() => {
+    localStorage.setItem('bibleGameState', JSON.stringify(gameState));
+    localStorage.setItem('usedCharacters', JSON.stringify(usedCharacters));
+  }, [gameState, usedCharacters]);
+
+  const resetGame = () => {
+    localStorage.removeItem('bibleGameState');
+    localStorage.removeItem('usedCharacters');
+    setGameState({
+      currentCharacter: null,
+      hintsRevealed: [],
+      score: 0,
+      totalRounds: 100,
+      currentRound: 1,
+      gameStatus: 'waiting',
+      lastGuess: '',
+      lastGuessCorrect: false,
+      availableCharacters: []
+    });
+    setUsedCharacters([]);
+    setUserGuess('');
+  };
+
   const startNewGame = () => {
     setGameState({
       currentCharacter: null,
@@ -416,7 +452,6 @@ const BibleGame = () => {
           <Progress value={progressPercentage} className="w-full" />
         </CardHeader>
       </Card>
-
       {/* Game Content */}
       {gameState.currentCharacter && (
         <>
@@ -549,6 +584,13 @@ const BibleGame = () => {
           )}
         </>
       )}
+
+      {/* Botão de Reiniciar */}
+      <div className="text-center mt-6">
+        <Button onClick={resetGame} variant="outline">
+          Reiniciar Jogo
+        </Button>
+      </div>
     </div>
   );
 };
