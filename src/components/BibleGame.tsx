@@ -588,7 +588,7 @@ const BibleGame = () => {
       {/* Botão de Reiniciar */}
       <div className="text-center mt-6">
         <Button onClick={resetGame} variant="outline">
-          Reiniciar Jogo
+          iniciar novamente o jogo
         </Button>
       </div>
     </div>
