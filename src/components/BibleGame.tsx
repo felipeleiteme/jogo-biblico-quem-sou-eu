@@ -163,7 +163,8 @@ const BibleGame = () => {
     hints.push({ type: 'spiritualJewel', text: character.spiritualJewel, difficulty: 4 });
     hints.push({ type: 'practicalLesson', text: character.practicalLesson, difficulty: 3 });
 
-    return hints;
+    // Garantir que as pistas sejam apresentadas das mais difíceis para as mais fáceis
+    return hints.sort((a, b) => b.difficulty - a.difficulty);
   };
 
   const revealNextHint = () => {
