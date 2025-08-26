@@ -175,8 +175,8 @@ const BibleGame = () => {
       lastGuess: userGuess,
       lastGuessCorrect: isCorrect,
       score: isCorrect ? prev.score + points : prev.score,
-      // Se acertou, revelar todas as pistas antes de finalizar
-      hintsRevealed: isCorrect ? allHintsForCharacter : prev.hintsRevealed,
+      // Revelar todas as pistas antes de finalizar, mesmo quando erra
+      hintsRevealed: allHintsForCharacter,
       gameStatus: 'finished'
     }));
 
