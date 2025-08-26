@@ -14,21 +14,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Quem Sou Eu? - Jogo Bíblico Interativo",
+  description: "Descubra personagens bíblicos através de pistas progressivas. Jogo educativo com 100 rodadas e design minimalista elegante.",
+  keywords: ["jogo bíblico", "bíblia", "personagens bíblicos", "educação cristã", "quem sou eu", "interativo"],
+  authors: [{ name: "Felipe Leite" }],
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Quem Sou Eu? - Jogo Bíblico Interativo",
+    description: "Descubra personagens bíblicos através de pistas progressivas. Jogo educativo com 100 rodadas.",
+    url: "https://github.com/felipeleiteme/jogo-biblico-quem-sou-eu",
+    siteName: "Quem Sou Eu? - Jogo Bíblico",
     type: "website",
+    locale: "pt_BR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Quem Sou Eu? - Jogo Bíblico Interativo",
+    description: "Descubra personagens bíblicos através de pistas progressivas.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

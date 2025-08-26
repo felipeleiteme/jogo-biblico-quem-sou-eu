@@ -1,14 +1,5 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Sitemap para o Jogo Bíblico "Quem Sou Eu?"
+Sitemap: https://github.com/felipeleiteme/jogo-biblico-quem-sou-eu

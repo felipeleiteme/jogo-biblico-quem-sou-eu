@@ -1,141 +1,106 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🎮 Quem Sou Eu? - Jogo Bíblico Interativo
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+Um jogo educativo e interativo para descobrir personagens bíblicos através de pistas progressivas. Desenvolvido com design minimalista e elegante, inspirado no estilo do jw.org.
 
-## ✨ Technology Stack
+## ✨ Características
 
-This scaffold provides a robust foundation built with:
+- 🎯 **100 rodadas únicas** - Cada rodada apresenta um personagem bíblico diferente
+- 🔍 **Pistas progressivas** - Das mais difíceis para as mais fáceis
+- 🏆 **Sistema de pontuação** - Quanto menos pistas usar, mais pontos ganha
+- 🎨 **Design minimalista** - Interface limpa e elegante
+- 📱 **Totalmente responsivo** - Funciona em qualquer dispositivo
+- 🌟 **Educativo** - Aprenda sobre personagens bíblicos de forma divertida
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+## 🚀 Tecnologias
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+- **Frontend**: Next.js 15, React 19, TypeScript 5
+- **Estilização**: Tailwind CSS 4, shadcn/ui
+- **Banco de Dados**: SQLite com Prisma
+- **Autenticação**: NextAuth.js
+- **Estado**: Zustand
+- **Animações**: Framer Motion
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+## 🎮 Como Jogar
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
+1. **Inicie o jogo** clicando em "Começar Jogo"
+2. **A primeira pista** (mais difícil) é revelada automaticamente
+3. **Tente adivinhar** o personagem com base na pista
+4. **Se não conseguir**, revele mais pistas (elas ficam mais fáceis)
+5. **Digite seu palpite** e veja se está correto
+6. **Continue para a próxima rodada** até completar as 100
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+## 📊 Sistema de Pontuação
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+- **5 pontos** - Acertou na primeira pista
+- **4 pontos** - Acertou na segunda pista
+- **3 pontos** - Acertou na terceira pista
+- **2 pontos** - Acertou na quarta pista
+- **1 ponto** - Acertou na quinta pista
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+**Pontuação máxima possível: 500 pontos!**
 
-## 🎯 Why This Scaffold?
+## 🛠️ Instalação e Execução
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+### Pré-requisitos
+- Node.js 18+ 
+- npm ou yarn
 
-## 🚀 Quick Start
-
+### Passos
 ```bash
-# Install dependencies
+# Clone o repositório
+git clone https://github.com/felipeleiteme/jogo-biblico-quem-sou-eu.git
+cd jogo-biblico-quem-sou-eu
+
+# Instale as dependências
 npm install
 
-# Start development server
+# Configure o banco de dados
+npm run db:push
+
+# Execute em modo desenvolvimento
 npm run dev
 
-# Build for production
-npm run build
-
-# Start production server
-npm start
+# Acesse http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+### Scripts Disponíveis
+- `npm run dev` - Servidor de desenvolvimento
+- `npm run build` - Build de produção
+- `npm run start` - Servidor de produção
+- `npm run lint` - Verificação de código
+- `npm run db:push` - Sincronizar banco de dados
 
-## 🤖 Powered by Z.ai
+## 🎨 Design e Inspiração
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
+O design foi criado com foco na simplicidade e elegância, inspirado no estilo minimalista do jw.org. Utilizamos:
 
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
+- **Paleta de cores suaves** com suporte a tema claro/escuro
+- **Tipografia clara** e legível
+- **Espaçamento generoso** para melhor respiração visual
+- **Animações sutis** para melhorar a experiência do usuário
 
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
+## 📱 Personagens Bíblicos
 
-## 📁 Project Structure
+O jogo inclui 100 personagens bíblicos conhecidos, desde figuras do Antigo Testamento até o Novo Testamento, proporcionando uma experiência educativa rica e diversificada.
 
-```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
-```
+## 🤝 Contribuição
 
-## 🎨 Available Features & Components
+Contribuições são bem-vindas! Sinta-se à vontade para:
 
-This scaffold includes a comprehensive set of modern web development tools:
+- Reportar bugs
+- Sugerir melhorias
+- Adicionar novos personagens
+- Melhorar o design
+- Otimizar o código
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+## 📄 Licença
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+## 👨‍💻 Autor
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
-
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+**Felipe Leite** - Desenvolvedor Full Stack apaixonado por criar experiências educativas e interativas.
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+**Divirta-se aprendendo sobre a Bíblia de forma interativa! 🎯✨**
