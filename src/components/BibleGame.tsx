@@ -164,14 +164,19 @@ const BibleGame = () => {
     // Verificar se o nome do personagem está contido na resposta do usuário
     // ou se a resposta do usuário está contida no nome do personagem
     const isCorrect = characterNameLower.includes(userGuessLower) || userGuessLower.includes(characterNameLower);
-    
-    const points = Math.max(1, 6 - gameState.hintsRevealed.length);
-    
+
+    // Capturar quantidade de pistas reveladas antes de potencialmente revelar todas
+    const revealedCountBeforeCheck = gameState.hintsRevealed.length;
+    const points = Math.max(1, 6 - revealedCountBeforeCheck);
+    const allHintsForCharacter = getAvailableHints(gameState.currentCharacter);
+
     setGameState(prev => ({
       ...prev,
       lastGuess: userGuess,
       lastGuessCorrect: isCorrect,
       score: isCorrect ? prev.score + points : prev.score,
+      // Se acertou, revelar todas as pistas antes de finalizar
+      hintsRevealed: isCorrect ? allHintsForCharacter : prev.hintsRevealed,
       gameStatus: 'finished'
     }));
 
